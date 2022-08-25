@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!--  
+        asyn:boolean 연산자 라서 선언으로도 true 병렬로 다운
+        장점: 패칭이 병렬적으로 일어나 다운받는 시간 절약
+        단점: javascript 먼저 다운이 되기에 html이 정의되지 않을 수 있음
+        페이지가 멈출 수 있음
+
+        defer: html과 패칭 병렬로 다운 후 javascript순서대로 실행.
+        '가장 효율적이고 안전한 방법.' 
+     -->
+    <!-- <script defer src="variable.js"></script> -->
+    <!-- <script defer src="function.js"></script> -->
+    <script defer src="Now_practice.js"></script>
+
+    <link href="./css/main.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="value">none</div>
+    <div class="value1">none</div>
+  </body>
+</html>
