@@ -1,0 +1,11 @@
+.app{
+    &__nav-menu{
+        color: #333;
+        font-size: 24px;
+        background-color: rgb(205, 250, 145);
+        padding: 12px;
+    }
+    &__list{
+        border-bottom: 1px solid #333 ;
+    }
+}
