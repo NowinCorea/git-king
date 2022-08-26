@@ -87,7 +87,6 @@ const king3 = king1;
 console.log(king1 == king2);
 console.log(king1 === king2);
 console.log(king1 === king3);
-console.clear();
 
 // equality - puzzler
 console.log(0 == false); //t

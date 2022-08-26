@@ -1,52 +1,102 @@
-'use strict';
+"use strict";
 
-console.log('my' + 'king');
-console.log('1' + 2);
-console.log(`sting literals: 1 + 2 = ${1 + 2}`);
-
-console.log(1 + 1);
-console.log(1 - 1);
-console.log(1 / 1);
-console.log(1 * 1);
-console.log(5 % 2);
-console.log(2 ** 3);
-
-let counter = 2;
-const preincrement = ++counter;
-
-console.log(`preincrement:${preincrement}, counter ${counter}`);
-const postincrement = counter++;
-
-console.log(`preincrement${preincrement}, counter ${counter}`);
-
-const predecrement = --counter;
-
-console.log(`predecrement ${predecrement}, counter ${counter}`);
-const postdecrement = counter--;
-console.log(`postdecrement${postdecrement}, counter${counter}`);
-
-let x = 3;
-let y = 6;
-
-x += y;
-x -= y;
-x *= y;
-x /= y;
-x %= y;
-
-console.log(10 < 6);
-console.log(10 <= 6);
-console.log(10 > 6);
-console.log(10 >= 6);
-
-const value1 = false;
-const value2 = 4 < 2;
-console.clear();
-function check() {
-  for (let i = 0; i < 10; i++) {
-    console.log('절~대로 절대로 모를거야');
-  }
-  return true;
+function printhello() {
+  console.log("hello");
 }
 
-check();
+printhello();
+
+function log(message) {
+  console.log(message);
+}
+
+log("open the door!!");
+
+function changename(obj) {
+  obj.name = "drrrrr";
+}
+const king = { name: "coder" };
+changename(king);
+console.log(king.name);
+
+function showmessage(message, from = "whos?") {
+  console.log(`${message} by ${from}`);
+}
+
+showmessage("you are mine.");
+
+function printall(...args) {
+  for (let i = 0; i < args.length; i++) {
+    console.log(args[i]);
+  }
+}
+
+printall("yes", "im", "king");
+
+let globalmessage = "global";
+function printmessage() {
+  let message = "hello";
+  console.log(message);
+  console.log(globalmessage);
+}
+
+printmessage();
+
+function sum(a, b) {
+  return a + b;
+}
+const result = sum(1, 2);
+console.log(`sum:${sum(1, 2)}`);
+
+const print = function () {
+  console.log("print");
+};
+print();
+const printagain = print;
+printagain();
+const sumagain = sum;
+console.log(sumagain(1, 3));
+
+function randomq(answer, printyes, printno) {
+  if (answer === "scv") {
+    printyes();
+  } else {
+    printno();
+  }
+}
+
+const printyes = function () {
+  console.log("yes!");
+};
+const printno = function () {
+  console.log("no!");
+};
+randomq("prove", printyes, printno);
+randomq("scv", printyes, printno);
+
+const simpleprint = () => {
+  console.log("simpleprint!");
+};
+
+const add = (a, b) => {
+  return a + b;
+};
+
+console.log(add(1, 3));
+
+(function hello() {
+  console.log("come on!");
+})();
+console.clear();
+
+function calc(obj) {
+  for (let i = 0; i < obj.item.length; i++) {
+    console.log(obj.item[i]);
+  }
+}
+
+let card = {
+  item: ["heart", "spade", "clover", "dia"],
+  looks: [123, 435, 5678],
+};
+calc(card);
