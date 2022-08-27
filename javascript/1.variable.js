@@ -50,7 +50,7 @@ console.log(`value: ${size}, type: ${typeof size}`);
 
 // number - speical numeric values: infinity, -infinity, NaN;
 const infinity = 1 / 0;
-const negativeInfinity = -1 / 0;
+const negativeinfinity = -1 / 0;
 const nAn = 'not a number' / 2;
 console.log(infinity);
 console.log(negaiveInfinity);

@@ -1,7 +1,7 @@
-"use strict";
+'use strict';
 
 function printhello() {
-  console.log("hello");
+  console.log('hello');
 }
 
 printhello();
@@ -10,32 +10,39 @@ function log(message) {
   console.log(message);
 }
 
-log("open the door!!");
+log('im king!!!');
 
 function changename(obj) {
-  obj.name = "drrrrr";
+  obj.name = 'kingchan';
 }
-const king = { name: "coder" };
-changename(king);
-console.log(king.name);
 
-function showmessage(message, from = "whos?") {
+const king = { name: 'coder' };
+changename(king);
+console.log(king);
+
+function showmessage(message, from = `that's king me`) {
   console.log(`${message} by ${from}`);
 }
 
-showmessage("you are mine.");
+showmessage('chanwoo');
 
 function printall(...args) {
   for (let i = 0; i < args.length; i++) {
     console.log(args[i]);
   }
+  for (const arg of args) {
+    console.log(arg);
+  }
+
+  args.forEach((arg) => console.log(arg));
 }
 
-printall("yes", "im", "king");
+printall('king', 'of', '_now');
+console.clear();
 
-let globalmessage = "global";
+let globalmessage = 'global';
 function printmessage() {
-  let message = "hello";
+  let message = 'hello';
   console.log(message);
   console.log(globalmessage);
 }
@@ -46,19 +53,32 @@ function sum(a, b) {
   return a + b;
 }
 const result = sum(1, 2);
-console.log(`sum:${sum(1, 2)}`);
+console.log(`sum:${result}`);
+
+function upgradeuser(user) {
+  if (user.point > 10) {
+    //...
+  }
+}
+
+//good!
+function upgradeuser(user) {
+  if (user.point <= 10) {
+    return;
+  }
+}
 
 const print = function () {
-  console.log("print");
+  console.log('print');
 };
 print();
-const printagain = print;
-printagain();
-const sumagain = sum;
-console.log(sumagain(1, 3));
+const printagaing = print;
+printagaing();
+const sumagaing = sum;
+console.log(sumagaing(1, 3));
 
-function randomq(answer, printyes, printno) {
-  if (answer === "scv") {
+function randomquiz(answer, printyes, printno) {
+  if (answer === 'scv') {
     printyes();
   } else {
     printno();
@@ -66,37 +86,28 @@ function randomq(answer, printyes, printno) {
 }
 
 const printyes = function () {
-  console.log("yes!");
+  console.log('yes!');
 };
-const printno = function () {
-  console.log("no!");
+
+const printno = function print() {
+  console.log('no!');
 };
-randomq("prove", printyes, printno);
-randomq("scv", printyes, printno);
+
+randomquiz('prove', printyes, printno);
+randomquiz('scv', printyes, printno);
 
 const simpleprint = () => {
-  console.log("simpleprint!");
+  console.log('simpleprint!');
 };
+
+simpleprint();
 
 const add = (a, b) => {
   return a + b;
 };
 
-console.log(add(1, 3));
+console.log(add(1, 2));
 
 (function hello() {
-  console.log("come on!");
+  console.log('IIFE!');
 })();
-console.clear();
-
-function calc(obj) {
-  for (let i = 0; i < obj.item.length; i++) {
-    console.log(obj.item[i]);
-  }
-}
-
-let card = {
-  item: ["heart", "spade", "clover", "dia"],
-  looks: [123, 435, 5678],
-};
-calc(card);
