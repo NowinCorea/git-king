@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 // object-oriedted programming
 // class: template
@@ -13,7 +13,7 @@ class King {
     this.name = name;
     this.age = age;
   }
-  speck() {
+  speak() {
     console.log(`${this.name}: you are dead already`);
   }
 
@@ -29,14 +29,14 @@ class King {
   }
 }
 
-const now = new King("now", "28");
+const now = new King('now', '28');
 console.log(now.name);
 console.log(now.age);
-now.speck();
+now.speak();
 
 // 2. getter and setters
 // age -1은 말이 안됨. 그래서 getter 와 setter를 사용함
-const user1 = new King("now1", "-1");
+const user1 = new King('now1', '-1');
 console.log(user1.age);
 
 // 3. Fields (publick, private)
@@ -49,13 +49,13 @@ class Expriment {
 
 const expriment = new Expriment();
 console.log(expriment.publicField);
-console.log(expriment.privateFied);
+console.log(expriment.privateField);
 
 // 4. static properties and methods
 // Too soon
 
 class Article {
-  static publisher = "king is me";
+  static publisher = 'king is me';
   constructor(articlenumber) {
     this.articlenumber = articlenumber;
   }
@@ -93,7 +93,7 @@ class Rectangle extends Shape {}
 class Triangle extends Shape {
   draw() {
     super.draw();
-    console.log("⁂");
+    console.log('⁂');
   }
   getArea() {
     return (this.width * this.height) / 2;
@@ -104,11 +104,11 @@ class Triangle extends Shape {
   }
 }
 
-const rectangle = new Rectangle(20, 20, "cornflowerblue");
+const rectangle = new Rectangle(20, 20, 'cornflowerblue');
 rectangle.draw();
 console.log(rectangle.getArea());
 
-const triangle = new Triangle(20, 20, "red");
+const triangle = new Triangle(20, 20, 'red');
 triangle.draw();
 console.log(triangle.getArea());
 
@@ -123,18 +123,18 @@ console.log(triangle.toString());
 
 function calculate(command, a, b) {
   switch (command) {
-    case "add":
+    case 'add':
       return a + b;
-    case "substract":
+    case 'substract':
       return a - b;
-    case "divide":
+    case 'divide':
       return a / b;
-    case "multiply":
+    case 'multiply':
       return a * b;
-    case "remainder":
+    case 'remainder':
       return a % b;
     default:
-      throw Error("unkown");
+      throw Error('unkown');
   }
 }
-console.log(calculate("adf", 2, 3));
+console.log(calculate('adf', 2, 3));

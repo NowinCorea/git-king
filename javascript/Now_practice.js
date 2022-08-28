@@ -1,113 +1,121 @@
 'use strict';
 
-function printhello() {
-  console.log('hello');
-}
-
-printhello();
-
-function log(message) {
-  console.log(message);
-}
-
-log('im king!!!');
-
-function changename(obj) {
-  obj.name = 'kingchan';
-}
-
-const king = { name: 'coder' };
-changename(king);
-console.log(king);
-
-function showmessage(message, from = `that's king me`) {
-  console.log(`${message} by ${from}`);
-}
-
-showmessage('chanwoo');
-
-function printall(...args) {
-  for (let i = 0; i < args.length; i++) {
-    console.log(args[i]);
+class king {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
   }
-  for (const arg of args) {
-    console.log(arg);
+  speak() {
+    console.log(`${this.name}: you are my king!`);
   }
 
-  args.forEach((arg) => console.log(arg));
+  get age() {
+    return this._age;
+  }
+
+  set age(value) {
+    this._age = value < 0 ? 0 : value;
+  }
 }
 
-printall('king', 'of', '_now');
+const now = new king('now', 27);
+console.log(now.name);
+console.log(now.age);
+now.speak();
+
+const user1 = new king('now1', '-1');
+console.log(user1.age);
+
+class expriment {
+  publicfield = 2;
+  #privatefield = 3.5;
+}
+
+const expriment1 = new expriment();
+console.log(expriment1.publicfield);
+console.log(expriment1.privatefield);
+
+class Article {
+  static publisher = 'king is me';
+  constructor(articlenumber) {
+    this.articlenumber = articlenumber;
+    console.log(articlenumber);
+  }
+
+  static printpublisher() {
+    console.log(Article.publisher);
+  }
+}
+
+const article1 = new Article(1);
+const article2 = new Article(2);
+console.log(Article.publisher);
+
+Article.printpublisher();
+
+class Shape {
+  constructor(width, height, color = 'colornumhere') {
+    this.width = width;
+    this.height = height;
+    this.color = color;
+  }
+
+  draw() {
+    console.log(`drawing ${this.color} color of`);
+  }
+
+  getArea() {
+    return this.width * this.height;
+  }
+}
+
+class Rectangle extends Shape {}
+class Triangle extends Shape {
+  draw() {
+    super.draw();
+    console.log('^^');
+  }
+
+  getArea() {
+    return (this.width * this.height) / 2;
+  }
+
+  toString() {
+    return `Triangle: color: ${this.color}`;
+  }
+}
+
+const rectangle = new Rectangle(20, 20, 'cornflowerblue');
+rectangle.draw();
+console.log(rectangle.getArea());
+
+const triangle = new Triangle(20, 20, 'red');
+triangle.draw();
+console.log(triangle.getArea());
+
 console.clear();
+console.log(rectangle instanceof Rectangle);
+console.log(triangle instanceof Rectangle);
+console.log(triangle instanceof Triangle);
+console.log(triangle instanceof Shape);
+console.log(triangle instanceof Object);
+console.log(triangle.toString());
 
-let globalmessage = 'global';
-function printmessage() {
-  let message = 'hello';
-  console.log(message);
-  console.log(globalmessage);
-}
-
-printmessage();
-
-function sum(a, b) {
-  return a + b;
-}
-const result = sum(1, 2);
-console.log(`sum:${result}`);
-
-function upgradeuser(user) {
-  if (user.point > 10) {
-    //...
+function calculate(command, a, b) {
+  switch (command) {
+    case 'add':
+      return a + b;
+    case 'substract':
+      return a - b;
+    case 'divide':
+      return a / b;
+    case 'multiply':
+      return a * b;
+    case 'remainder':
+      return a % b;
+    default:
+      throw Error('i love you ❤');
   }
 }
 
-//good!
-function upgradeuser(user) {
-  if (user.point <= 10) {
-    return;
-  }
-}
-
-const print = function () {
-  console.log('print');
-};
-print();
-const printagaing = print;
-printagaing();
-const sumagaing = sum;
-console.log(sumagaing(1, 3));
-
-function randomquiz(answer, printyes, printno) {
-  if (answer === 'scv') {
-    printyes();
-  } else {
-    printno();
-  }
-}
-
-const printyes = function () {
-  console.log('yes!');
-};
-
-const printno = function print() {
-  console.log('no!');
-};
-
-randomquiz('prove', printyes, printno);
-randomquiz('scv', printyes, printno);
-
-const simpleprint = () => {
-  console.log('simpleprint!');
-};
-
-simpleprint();
-
-const add = (a, b) => {
-  return a + b;
-};
-
-console.log(add(1, 2));
-
-(function hello() {
-  console.log('IIFE!');
-})();
+console.log(calculate('multiply', 2, 3));
