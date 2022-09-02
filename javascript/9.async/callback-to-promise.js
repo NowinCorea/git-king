@@ -16,10 +16,10 @@ function printimmediately(print) {
 printimmediately(() => console.log("hello!"));
 
 // Asynchronous callback
-function printwidthdelay(print, timeout) {
+function printwithdelay(print, timeout) {
   setTimeout(print, timeout);
 }
-printwidthdelay(() => console.log("async callback"), 2000);
+printwithdelay(() => console.log("async callback"), 2000);
 
 console.clear();
 

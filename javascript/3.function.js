@@ -87,7 +87,7 @@ function upgradeUser(user) {
   if (user.point <= 10) {
     return;
   }
-  // long upgrad logic...
+  // long upgrade logic...
 }
 
 // First-class function
