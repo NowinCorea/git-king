@@ -1,6 +1,6 @@
 // 1. String concatenation
-console.log('my' + ' king');
-console.log('1' + 2);
+console.log("my" + " king");
+console.log("1" + 2);
 console.log(`sting literals: 1 + 2 = ${1 + 2} `);
 // \n:줄바꿈
 // \t:tab바꿈
@@ -60,7 +60,7 @@ console.log(`and:${value1 && value2 && check()}`);
 function check() {
   for (let i = 0; i < 10; i++) {
     //logic time
-    console.log('절대로 절대로 절대로 절~대로 절대로 모를거야');
+    console.log("절대로 절대로 절대로 절~대로 절대로 모를거야");
   }
   return true;
 }
@@ -69,7 +69,7 @@ function check() {
 console.log(!value1);
 
 // 7. Equality
-const stringFive = '5';
+const stringFive = "5";
 const numberFive = 5;
 
 // == loose equality, with type conversion
@@ -81,8 +81,8 @@ console.log(stringFive === numberFive);
 console.log(stringFive !== numberFive);
 
 // object equality by reference
-const king1 = { name: 'chan' };
-const king2 = { name: 'chan' };
+const king1 = { name: "chan" };
+const king2 = { name: "chan" };
 const king3 = king1;
 console.log(king1 == king2);
 console.log(king1 === king2);
@@ -91,43 +91,43 @@ console.log(king1 === king3);
 // equality - puzzler
 console.log(0 == false); //t
 console.log(0 === false); //f
-console.log('' == false); //t
-console.log('' === false); //f
+console.log("" == false); //t
+console.log("" === false); //f
 console.log(null == undefined); //t
 console.log(null === undefined); //f
 
 // 8. Conditional operators: if
 // if, else if, else
-const name = 'King';
-if (name === 'King') {
-  console.log('You are the King of coder');
-} else if (name === 'Kingchan') {
-  console.log('you are my load!');
+const name = "King";
+if (name === "King") {
+  console.log("You are the King of coder");
+} else if (name === "Kingchan") {
+  console.log("you are my load!");
 } else {
-  console.log('Yeahhhh!!');
+  console.log("Yeahhhh!!");
 }
 
 // 9. Ternary operator: ?
 // condition ? value1 : value2;
-console.log(name === 'King' ? 'yes' : 'no');
+console.log(name === "King" ? "yes" : "no");
 
 // 10. Switch statement
 // use for multiple if checks
 // use for enum-like value check
 // use for multiple type checks in TS
-const browser = '';
+const browser = "";
 switch (browser) {
-  case 'IE':
-    console.log('love you!');
+  case "IE":
+    console.log("love you!");
     break;
-  case 'Chrome':
-    console.log('love you!!');
+  case "Chrome":
+    console.log("love you!!");
     break;
-  case 'Firefox':
-    console.log('love you!!!');
+  case "Firefox":
+    console.log("love you!!!");
     break;
   default:
-    console.log('love you!!!!');
+    console.log("love you!!!!");
     break;
 }
 //같은 값일때는 생략가능
@@ -174,7 +174,7 @@ for (let i = 0; i < 10; i++) {
 // }
 
 for (let i = 0; i <= 10; i++) {
-  i % 2 === 0 ? console.log(i) : '';
+  i % 2 === 0 ? console.log(i) : "";
 }
 
 // Q2. iterate from 0 to 10 and print numbers until
