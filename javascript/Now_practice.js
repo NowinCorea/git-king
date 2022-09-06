@@ -24,7 +24,7 @@ class UserStorage {
         } else {
           reject(new Error("no access!"));
         }
-      }, 1000);
+      }, 100);
     });
   }
 }
