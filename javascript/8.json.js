@@ -35,7 +35,7 @@ console.log(json);
 // parse(json)
 
 console.clear();
-juson = JSON.stringify(queen);
+json = JSON.stringify(queen);
 const obj = JSON.parse(json, (key, value) => {
   console.log(`key:${key}, value: ${value}`);
   return key === "birthDate" ? newDate(value) : value;
