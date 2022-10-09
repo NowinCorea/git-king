@@ -1,41 +1,14 @@
 "use strict";
 
-class UserStorage {
-  loginUser(id, password) {
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        if (
-          (id === "king" && password === "chan") ||
-          (id === "master" && password === "code")
-        ) {
-          resolve(id);
-        } else {
-          reject(new Error("i love u ❤"));
-        }
-      }, 2000);
-    });
+function solution(n) {
+  var answer = 0;
+  n = n.toString();
+  console.log(n);
+  for (let i = 0; i < n.length; i++) {
+    answer += parseInt(n[i]);
+    console.log(n);
   }
-
-  getRoles(user) {
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        if (user === "king") {
-          resolve({ name: "king", role: "dragon" });
-        } else {
-          reject(new Error("no access!"));
-        }
-      }, 100);
-    });
-  }
+  return answer;
 }
 
-const userStorage = new UserStorage();
-const id = prompt("enter your id");
-const password = prompt("enter your password");
-userStorage
-  .loginUser(id, password)
-  .then(userStorage.getRoles)
-  .then((user) =>
-    alert(`welcom my load ${user.name}, you have a ${user.role} role`)
-  )
-  .catch(console.log);
+console.log(solution(465654));
