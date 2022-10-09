@@ -60,7 +60,7 @@ userStorage.loginUser(
       user,
       (userWithRole) => {
         alert(
-          `welcome my load${userWithRole.name}, you have a ${user.role} role`
+          `welcome my load${userWithRole.name}, you have a ${userWithRole.role} role`
         );
       },
       (error) => {}
