@@ -3,3 +3,7 @@
   width: 64px;
   height: 64px;
 }
+
+b{
+  user-select: none;
+}
